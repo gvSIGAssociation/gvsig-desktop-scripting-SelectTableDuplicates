@@ -50,7 +50,7 @@ class SelectTableDuplicatesExtension(ScriptingExtension):
     
   def execute(self,actionCommand, *args):
     actionCommand = actionCommand.lower()
-    if actionCommand == "selection-table-select-duplicates":
+    if actionCommand == "selection-table-select-duplicatesnofirst":
       table = currentTable()
       tablePanel = getWindowOfTable(table)
       columns = tablePanel.getSelectedColumnsDescriptors()
@@ -67,9 +67,9 @@ class SelectTableDuplicatesExtension(ScriptingExtension):
 def selfRegister():
   i18n = ToolsLocator.getI18nManager()
   moduleId = "SelectTableDuplicates"
-  actionName = "selection-table-select-duplicates"
-  tooltip_key =  i18n.getTranslation("_Select_table_duplicates")
-  menu_entry = "Selection/_Select_table_duplicates"
+  actionName = "selection-table-select-duplicatesnofirst"
+  tooltip_key =  i18n.getTranslation("_Select_all_duplicates_except_the_first")
+  menu_entry = "Selection/_Select_table_duplicates/_Select_all_duplicates_except_the_first"
   
   extension = SelectTableDuplicatesExtension()
 
@@ -80,6 +80,7 @@ def selfRegister():
   #
   # Registramos los iconos en el tema de iconos
   icon = File(getResource(__file__,"images",actionName + ".png")).toURI().toURL()
+  
   iconTheme = ToolsSwingLocator.getIconThemeManager().getCurrent()
   iconTheme.registerDefault("scripting." + moduleId, "action", actionName, None, icon)
 
@@ -90,7 +91,7 @@ def selfRegister():
     actionName,    # Action command
     actionName,    # Icon name
     None,          # Accelerator
-    302000000,     # Position
+    300450200,     # Position
     i18n.getTranslation(tooltip_key)    # Tooltip
   )
   action = actionManager.registerAction(action)
@@ -98,7 +99,9 @@ def selfRegister():
   # Añadimos la entrada en el menu herramientas
   application.addMenu(action, menu_entry)
   # Añadimos la accion como un boton en la barra de herramientas.
-  #application.addTool(action, "view")
+  #application.addTool(action, "selection")
+  application.getMainFrame().addTool(action,"selection","selection-table-duplicates");
+  application.refreshMenusAndToolBars()
 
 def main(*args):
   selfRegister()
