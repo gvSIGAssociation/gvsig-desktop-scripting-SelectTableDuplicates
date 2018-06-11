@@ -5,7 +5,7 @@ from gvsig import getResource
 
 from java.io import File
 from org.gvsig.tools import ToolsLocator
-from actions import selfRegister
+from addons.SelectTableDuplicates.actions import selfRegister
 
 def main(*args):
 

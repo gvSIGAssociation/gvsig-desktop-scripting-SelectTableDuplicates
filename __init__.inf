@@ -1,6 +1,9 @@
+[script]
+enable = true
+
 [Unit]
 type = Script
-name = autorun
+name = __init__
 description = 
 createdBy = 
 version = 
@@ -8,6 +11,4 @@ version =
 [Script]
 main = main
 Lang = python
-enable = true
-isolationGroup = gvsig-base
 

@@ -18,7 +18,7 @@ from org.gvsig.app.project.documents.table import TableManager
 
 from gvsig import currentTable
 
-from selectduplicates import selectDuplicates
+from addons.SelectTableDuplicates.selectduplicates import selectDuplicates
 
 def getWindowOfTable(self):
     application = ApplicationLocator.getManager()
