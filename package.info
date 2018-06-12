@@ -1,5 +1,5 @@
 #
-#Wed May 30 23:43:55 CEST 2018
+#Tue Jun 12 14:48:58 CEST 2018
 owner=gvSIG association
 code=SelectTableDuplicates
 java-version=j1_7
@@ -9,14 +9,13 @@ version=1.0.0-2
 state=testing
 operating-system=all
 dependencies=
-sources-url=
+sources-url=https\://github.com/gvSIGAssociation/gvsig-desktop-scripting-SelectTableDuplicates
 web-url=
 architecture=all
 model-version=1.0.1
 categories=Table
 description=
-owner-url=
+owner-url=http\://www.gvsig.com
 buildNumber=2
-download-url=https\://github.com/gvSIGAssociation/gvsig-desktop-scripting-SelectTableDuplicates/releases/download/1.0.0-1/gvSIG-desktop-2.4.0-SelectTableDuplicates-1.0.0-1-testing-all-all-j1_7.gvspkg
-gvSIG-version=2.4.0
+gvSIG-version=2.4.1
 name=Tools\: Select duplicates in the table
