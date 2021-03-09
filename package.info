@@ -1,11 +1,11 @@
 #
-#Tue Jun 12 14:48:58 CEST 2018
+#Tue Mar 09 13:54:21 CET 2021
 owner=gvSIG association
 code=SelectTableDuplicates
 java-version=j1_7
 official=true
 type=Script
-version=1.0.0-2
+version=1.0.0-4
 state=testing
 operating-system=all
 dependencies=
@@ -16,6 +16,6 @@ model-version=1.0.1
 categories=Table
 description=
 owner-url=http\://www.gvsig.com
-buildNumber=2
-gvSIG-version=2.4.1
+buildNumber=4
+gvSIG-version=2.6.0
 name=Tools\: Select duplicates in the table
